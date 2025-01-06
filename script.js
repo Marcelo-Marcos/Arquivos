@@ -8,7 +8,6 @@ function validar () {
         console.log('True');
         menu1.style.display = 'block';
 
-            console.log('Falselink2');
             link2.checked = false;
             menu2.style.display = 'none';
     } else {
@@ -27,11 +26,9 @@ function validar2 () {
         console.log('True');
         menu2.style.display = 'block';
 
-            console.log('Falselink1');
             link1.checked = false;
             menu1.style.display = 'none';
     } else {
-        console.log('false');
         menu2.style.display = 'none';
     }
 }
