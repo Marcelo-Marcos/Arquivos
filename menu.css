@@ -1,22 +1,26 @@
 .cabecalho__menu {
   display: flex;
 }
-.menu__opcao {
+.menu__opcao,
+.menu__opcao2 {
   display: none;
 }
 
-.menu__lista {
+.menu__lista,
+.menu__lista2 {
   display: none;
   position: absolute;
   background-color: #4d4c4c;
   width: 40%;
 }
 
-.navegador {
+.navegador,
+.navegador2 {
   color: #ffffff;
 }
 
-.menu__opcao:checked~.menu__lista {
+.menu__opcao:checked~.menu__lista,
+.menu__opcao2:checked~.menu__lista2 {
   display: block;
 }
 
