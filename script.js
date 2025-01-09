@@ -39,11 +39,8 @@ function abrirPagina (Valor) {
     formulario.style.display = "flex";
 
     switch (Valor) {
-       /* case 4:
-            link.src = "https://docs.google.com/forms/d/1aTdBbv2l8ZMT3B1PiIkJevYe_qB41_HtbqSHEewMw9o/viewform";
-        break;*/
         case 4:
-            link.src = "https://drive.google.com/file/d/1QIEE-N4LRsO_DR9upue0t012udM7HRtH/view";
+            link.src = "https://docs.google.com/forms/d/1aTdBbv2l8ZMT3B1PiIkJevYe_qB41_HtbqSHEewMw9o/viewform";
         break;
         case 5:
             link.src = "https://docs.google.com/forms/d/1cQ0D1ZvDEv0wTZUJAw_INdFhEVCnj04Lf_WO0L6RGkQ/viewform";

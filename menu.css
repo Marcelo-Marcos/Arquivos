@@ -14,7 +14,8 @@
   width: 40%;
 }
 
-.navegador {
+.navegador,
+.navegador__geral {
   color: #ffffff;
 }
 
