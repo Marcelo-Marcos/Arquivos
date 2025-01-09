@@ -35,6 +35,9 @@ function validar2 () {
 
 function abrirPagina (Valor) {
     let link = document.getElementById('paginaPrincipal');
+    let formulario = document.querySelector('.formularios');
+    formulario.style.display = "flex";
+
     if (Valor === 1) {
         link.src = "https://docs.google.com/forms/d/1aTdBbv2l8ZMT3B1PiIkJevYe_qB41_HtbqSHEewMw9o/viewform";
     } else if (Valor === 2) {
