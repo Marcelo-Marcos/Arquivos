@@ -38,38 +38,34 @@ function abrirPagina (Valor) {
     let formulario = document.querySelector('.formularios');
     formulario.style.display = "flex";
 
-    if (Valor === 1) {
-        link.src = "https://docs.google.com/forms/d/1aTdBbv2l8ZMT3B1PiIkJevYe_qB41_HtbqSHEewMw9o/viewform";
-    } else if (Valor === 2) {
-        link.src = "https://docs.google.com/forms/d/1cQ0D1ZvDEv0wTZUJAw_INdFhEVCnj04Lf_WO0L6RGkQ/viewform";
-    } else if (Valor === 3) {
-        link.src = "https://docs.google.com/forms/d/1bvhHmg4IpnRgIXZDSQ9DE2NLpMZTLhlOH-zCjk0stOY/viewform";
-    } else if (Valor === 4) {
-        link.src = "https://docs.google.com/forms/d/11E1aRR36XpDFgbAuQW66pLqkXctZ2E3H3bbJv9KusGA/viewform";
+    switch (Valor) {
+       /* case 4:
+            link.src = "https://docs.google.com/forms/d/1aTdBbv2l8ZMT3B1PiIkJevYe_qB41_HtbqSHEewMw9o/viewform";
+        break;*/
+        case 4:
+            link.src = "https://drive.google.com/file/d/1QIEE-N4LRsO_DR9upue0t012udM7HRtH/view";
+        break;
+        case 5:
+            link.src = "https://docs.google.com/forms/d/1cQ0D1ZvDEv0wTZUJAw_INdFhEVCnj04Lf_WO0L6RGkQ/viewform";
+        break;
+        case 6:      
+            link.src = "https://docs.google.com/forms/d/1bvhHmg4IpnRgIXZDSQ9DE2NLpMZTLhlOH-zCjk0stOY/viewform";
+        break;
+        case 7:      
+            link.src = "https://docs.google.com/forms/d/11E1aRR36XpDFgbAuQW66pLqkXctZ2E3H3bbJv9KusGA/viewform";
+        break;
+        default:
+            alert('Página não encontrada');
+        break;
     }
 }
 
-    let btLink = document.getElementById("btLink");
-        btLink.addEventListener("click", function(event) {
-            event.preventDefault(); // Evita o comportamento padrão do link
-            abrirPagina(1);
-        });
+const btLink = document.querySelectorAll('.navegador');  // Seleciona todos os elementos <a> com a classe 'navegador'
 
-    let btLink2 = document.getElementById("btLink2");
-    btLink2.addEventListener("click", function(event) {
-        event.preventDefault(); // Evita o comportamento padrão do link
-        abrirPagina(2);
-    });
-
-    let btLink3 = document.getElementById("btLink3");
-    btLink3.addEventListener("click", function(event) {
-        event.preventDefault(); // Evita o comportamento padrão do link
-        abrirPagina(3);
-    });
-
-    let btLink4 = document.getElementById("btLink4");
-    btLink4.addEventListener("click", function(event) {
-        event.preventDefault(); // Evita o comportamento padrão do link
-        abrirPagina(4);
-    });
-    
+btLink.forEach((link, index) => {  // Itera sobre todos os links
+  link.addEventListener('click', event => {  // Adiciona o ouvinte de evento para o clique
+    const valorDoLink = index;  // Obtém o índice do link clicado
+    event.preventDefault();  // Impede que o link siga seu comportamento padrão (navegação)
+    abrirPagina(valorDoLink);  // Chama a função para abrir a página, passando o índice
+  });
+});
